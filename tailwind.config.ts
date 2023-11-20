@@ -14,8 +14,9 @@ const colorConfig = {
     600: "#AFAEAA",
   },
   tertiary: {
-    400: "#FF9FC7",
-    500: "#F4498F",
+    400: "#ffb32c33",
+    500: "#FFB32C",
+    700: "#704900"
   },
   error: {
     400: "#FFDCDC",
@@ -40,7 +41,7 @@ const colorConfig = {
   gray: {
     100: "#F2F2F2",
     200: "#E6E6E6",
-    300: "#CCCCCC",
+    300: "#F3F4F6",
     400: "#B3B3B3",
     500: "#999999",
     600: "#808080",
