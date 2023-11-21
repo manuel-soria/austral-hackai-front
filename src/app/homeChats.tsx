@@ -31,7 +31,7 @@ const chats = [
 
 const HomeChats = () => {
   return (
-      <div className={"px-4 py-8 h-screen bg-gray-300"}>
+      <div className={"px-4 py-8 h-screen bg-gray-100 border-r-gray-300"}>
         <H4>Mis Tutores</H4>
         <div className={"flex flex-col mt-6"}>
           {

@@ -12,7 +12,7 @@ const LeftNavigationIcon = (props: LeftNavigationIconProps) => {
 
   const pathname = usePathname()
   const active = pathname.split("/")[0] === url
-  const bgColour = active ? "bg-primary-500" : ""
+  const bgColour = active ? "bg-secondary-200" : ""
     return (
         <Link href={`$/{url}`} className={"cursor-pointer flex flex-col items-center justify-center p-2.5 rounded-lg "+bgColour}>
           <Image src={icon} alt={url} width={24} height={24}/>

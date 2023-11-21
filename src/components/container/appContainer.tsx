@@ -5,7 +5,7 @@ type AppContainerProps = {
 }
 const AppContainer = (props: AppContainerProps) => {
   return (
-      <div className={"flex h-screen"}>
+      <div className={"flex h-screen border-r-gray-300"}>
         <LeftNavigation/>
         {props.children}
       </div>

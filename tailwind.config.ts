@@ -2,16 +2,22 @@ import type {Config} from 'tailwindcss'
 
 const colorConfig = {
   primary: {
-    300: "#ECECEC",
-    400: "#D9D9D9",
-    500: "#D1D1D1",
-    600: "#9D9D9D",
-    700: "#8B8B8B",
+    100: "#A1C9FF",
+    200: "#6E9BFF",
+    300: "#3B6EFF",
+    400: "#2350FF",
+    500: "#1D67FF",
+    600: "#1950DB",
+    700: "#143AAC",
   },
   secondary: {
-    400: "#F4F2EE",
-    500: "#D3D1CC",
-    600: "#AFAEAA",
+    100: "#FFAEBD",
+    200: "#FF7588",
+    300: "#FF475B",
+    400: "#FF3A52",
+    500: "#FF2D48",
+    600: "#FF1F3E",
+    700: "#FF1134",
   },
   tertiary: {
     400: "#ffb32c33",
@@ -39,20 +45,21 @@ const colorConfig = {
     600: "#FFB74D",
   },
   gray: {
-    100: "#F2F2F2",
-    200: "#E6E6E6",
+    100: "#F9FAFB",
+    200: "#E5E7EB",
     300: "#F3F4F6",
     400: "#B3B3B3",
     500: "#999999",
     600: "#808080",
     700: "#666666",
   },
-  black: "#2D2D2D",
 }
 
 const config: Config = {
   content: [
     './src/**/**/*.{js,ts,jsx,tsx,mdx}',
+    './src/**/*.{js,ts,jsx,tsx,mdx}',
+    'src/components/roundedImage.tsx'
   ],
   theme: {
     extend: {
