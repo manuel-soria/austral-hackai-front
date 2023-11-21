@@ -9,11 +9,11 @@ const LeftNavigation = () => {
   return (
       <div className={"bg-white w-20 p-3.5 py-4 flex flex-col justify-between content-center"}>
         <div>
-          <Image src={'logo.svg'} alt={'our-logo'} width={50} height={50}/>
+          <Image src={'logo.svg'} alt={'our-logo'} width={40} height={40}/>
           <div className={'mt-10 flex flex-col gap-2'}>
             {
-              icons.map(({url, icon}, index) => (
-                  <LeftNavigationIcon key={index} url={url} icon={icon}/>
+              icons.map(({url}, index) => (
+                  <LeftNavigationIcon key={index} url={url}/>
               ))
             }
           </div>

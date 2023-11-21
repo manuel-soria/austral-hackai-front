@@ -1,6 +1,6 @@
 import type {Config} from 'tailwindcss'
 
-const colorConfig = {
+export const colorConfig = {
   primary: {
     100: "#A1C9FF",
     200: "#6E9BFF",
@@ -11,7 +11,7 @@ const colorConfig = {
     700: "#143AAC",
   },
   secondary: {
-    100: "#FFAEBD",
+    100: "#f8ccd7",
     200: "#FF7588",
     300: "#FF475B",
     400: "#FF3A52",
@@ -53,6 +53,7 @@ const colorConfig = {
     600: "#808080",
     700: "#666666",
   },
+  black: "#000000",
 }
 
 const config: Config = {

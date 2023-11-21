@@ -6,7 +6,7 @@ import React, {useEffect} from "react";
 import RoundedImage from "src/components/roundedImage";
 
 const ChatsContainer = () => {
-  const {messages, input, handleInputChange, handleSubmit} = useChat();
+  const {messages, input, handleInputChange, handleSubmit, isLoading} = useChat();
   const avatar = "/avatars/blue.png"
 
   useEffect(() => {
@@ -25,13 +25,23 @@ const ChatsContainer = () => {
               <div key={index}>
                 {
                     message.role !== "user" && (
-                        <RoundedImage src={avatar} className={"mb-4"} width={30} height={30}/>
+                        <div>
+                          <RoundedImage src={avatar} className={"mb-4"} width={30} height={30}/>
+                        </div>
                     )
                 }
                 <Message id={"chat-messages-" + index} message={message.content}
                          isSender={message.role === "user"}/>
               </div>
           ))}
+          {/*{*/}
+          {/*    isLoading && (*/}
+          {/*        <div>*/}
+          {/*          <RoundedImage src={avatar} className={"mb-4"} width={30} height={30}/>*/}
+          {/*          <Message id={"chat-messages-" + messages.length} loading={true} isSender={false}/>*/}
+          {/*        </div>*/}
+          {/*    )*/}
+          {/*}*/}
         </div>
         <SendMessage value={input} onChange={handleInputChange} onSendMessage={handleSubmit}/>
       </div>

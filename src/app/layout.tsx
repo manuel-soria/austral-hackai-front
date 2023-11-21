@@ -18,6 +18,7 @@ export default function RootLayout({
   return (
       <html lang="en">
       <head/>
+      <link rel="icon" href="/logo.svg" sizes="any" />
       <body className={"h-screen text-black"}>
       <AppContainer>{children}</AppContainer>
       </body>

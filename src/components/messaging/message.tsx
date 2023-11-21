@@ -1,15 +1,15 @@
 import React from 'react';
 import {motion, MotionProps} from "framer-motion"
-import Caption from "src/utils/typography/caption";
 
 export interface MessageProps {
-  message: string;
+  message?: string;
   isSender: boolean;
   id?: string;
+  loading?: boolean;
 }
 
 const Message: React.FC<MessageProps> = (props: MessageProps) => {
-  const {message, isSender, id} = props;
+  const {message, isSender, id, loading} = props;
   const messageStyles = isSender ? {
     justify: 'justify-end',
     bg: 'bg-primary-500 text-white',
@@ -43,14 +43,9 @@ const Message: React.FC<MessageProps> = (props: MessageProps) => {
         <div
             className={`${messageStyles.bg} ${messageStyles.border} relative p-3 rounded-2xl min-w-xs overflow-ellipsis break-words max-w-[532px]`}
         >
-          {message}
-          {/*<div className={`flex justify-end mt-4`}>*/}
-          {/*  <Caption className={messageStyles.caption}>*/}
-          {/*    {date.getHours()}:{date.getMinutes()}*/}
-          {/*  </Caption>*/}
-          {/*</div>*/}
+          <div className={loading ? "dot-flashing" : ""}>{message}</div>
+          <div id={id}/>
         </div>
-        <div id={id}/>
       </motion.div>
   );
 };
