@@ -1,11 +1,11 @@
 import HomeChatItem from "src/app/student/[id]/homeChatItem";
 import H4 from "src/utils/typography/h4";
 
-const chats = [
+export const currentChats = [
   {
-    name: "Introduccion a ingenieria",
+    name: "Inteligencia Artificial",
     id: "1",
-    image: "/avatars/blue.png"
+    image: "/avatars/purple.png"
   },
   {
     name: "Diseño de interaccion",
@@ -13,9 +13,9 @@ const chats = [
     image: "/avatars/green.png"
   },
   {
-    name: "Inteligencia Artificial",
+    name: "Introduccion a ingenieria",
     id: "3",
-    image: "/avatars/purple.png"
+    image: "/avatars/blue.png"
   },
   {
     name: "Marketing Digital",
@@ -35,7 +35,7 @@ const HomeChats = () => {
         <H4>Mis Tutores</H4>
         <div className={"flex flex-col mt-6 gap-2"}>
           {
-            chats.map((chat, index) => (
+            currentChats.map((chat, index) => (
               <HomeChatItem key={index} {...chat}/>
             ))
           }

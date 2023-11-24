@@ -55,7 +55,7 @@ export const colorConfig = {
   },
   black: "#000000",
   green: {
-    400:  "#e6f4ef",
+    400: "#e6f4ef",
     500: "#40C379",
     600: "#0D582E"
   }
@@ -69,6 +69,21 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      animationDelay: {
+        '1': '0.2s',
+        '2': '0.4s',
+        '3': '0.6s',
+      },
+      keyframes: {
+        bounce: {
+          '0%, 20%, 50%, 80%, 100%': {
+            transform: 'translateY(0)',
+          },
+          '40%': {
+            transform: 'translateY(-10px)',
+          },
+        },
+      },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
         'gradient-conic':
@@ -81,6 +96,8 @@ const config: Config = {
       },
     },
   },
-  plugins: [],
+  plugins: [
+    require("tailwindcss-animation-delay"),
+  ],
 }
 export default config
