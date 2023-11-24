@@ -14,7 +14,7 @@ interface LabelProps {
 const Label = (props: LabelProps) => {
   const {value, placeholder, setValue, label, caption, error, disabled} = props;
   const textColor = error ? "text-error-500" : disabled ? "text-gray-500" : "text-black";
-  const borderColor = error ? "border-error-500" : disabled ? "border-gray-300" : "border-gray-500";
+  const borderColor = error ? "border-error-500" : disabled ? "border-gray-300" : "border-gray-300";
   return (
       <div>
         {label && <P className={"text-base pb-2 "+textColor}>{label}</P>}
