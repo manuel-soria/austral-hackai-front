@@ -2,6 +2,7 @@ import {ChangeEvent, SyntheticEvent, useRef, useState} from "react";
 import Image from "next/image";
 import SendIcon from "../../../public/icons/send";
 import {colorConfig} from "../../../tailwind.config";
+import message from "src/components/messaging/message";
 
 interface SendMessageProps {
   value: string;
@@ -41,9 +42,9 @@ const SendMessage = (props: SendMessageProps) => {
              value={value}
              ref={textRef}
          />
-        <div className={"p-2 rounded-lg bg-gray-200"} onClick={handleSendMessage} onMouseEnter={() => setActive(true)}
+        <div className={"p-2 rounded-lg bg-gray-200 cursor-pointer"} onClick={handleSendMessage} onMouseEnter={() => value && setActive(true)}
              onMouseLeave={() => setActive(false)}>
-          <SendIcon color={colorConfig.gray["500"]}/>
+          <SendIcon color={active ? colorConfig.primary["500"] : colorConfig.gray["500"]}/>
         </div>
       </div>
   );

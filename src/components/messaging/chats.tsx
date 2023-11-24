@@ -5,7 +5,7 @@ import React, {useEffect, useState} from "react";
 import RoundedImage from "src/components/common/roundedImage";
 import {useChat} from "../../utils/hooks/useChat";
 
-const ChatsContainer = async => {
+const ChatsContainer = () => {
 	const { messages, input, handleInputChange, handleSubmit, isLoading } =
 		useChat();
 	const avatar = "/avatars/blue.png";
@@ -30,7 +30,7 @@ const ChatsContainer = async => {
 				className={"flex-1 basis-0 p-8 overflow-y-auto w-full"}
 				id={"chat-messages"}
 			>
-				{messages != undefined && messages.map(
+				{messages?.length > 0 && messages.map(
 					(
 						message: { role: "user" | "system"; content: string },
 						index: number
@@ -66,7 +66,7 @@ const ChatsContainer = async => {
 			<SendMessage
 				value={input}
 				onChange={(e) => handleInputChange(e)}
-				onSendMessage={(e) => handleSubmit(e)}
+				onSendMessage={(e) => handleSubmit()}
 			/>
 		</div>
 	);
