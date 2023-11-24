@@ -1,4 +1,4 @@
-import HomeChatItem from "src/app/homeChatItem";
+import HomeChatItem from "src/app/student/[id]/homeChatItem";
 import H4 from "src/utils/typography/h4";
 
 const chats = [
@@ -33,7 +33,7 @@ const HomeChats = () => {
   return (
       <div className={"px-4 py-8 h-screen bg-gray-100 border-r-gray-300"}>
         <H4>Mis Tutores</H4>
-        <div className={"flex flex-col mt-6"}>
+        <div className={"flex flex-col mt-6 gap-2"}>
           {
             chats.map((chat, index) => (
               <HomeChatItem key={index} {...chat}/>

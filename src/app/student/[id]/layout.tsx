@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import HomeChats from "src/app/homeChats";
+import HomeChats from "src/app/student/[id]/homeChats";
 
 const HomeLayout = ({
                       children,

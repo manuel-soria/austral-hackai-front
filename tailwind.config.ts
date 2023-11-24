@@ -47,20 +47,25 @@ export const colorConfig = {
   gray: {
     100: "#F9FAFB",
     200: "#E5E7EB",
-    300: "#F3F4F6",
+    300: "#D1D5DB",
     400: "#B3B3B3",
     500: "#999999",
     600: "#808080",
     700: "#666666",
   },
   black: "#000000",
+  green: {
+    400:  "#e6f4ef",
+    500: "#40C379",
+    600: "#0D582E"
+  }
 }
 
 const config: Config = {
   content: [
     './src/**/**/*.{js,ts,jsx,tsx,mdx}',
     './src/**/*.{js,ts,jsx,tsx,mdx}',
-    'src/components/roundedImage.tsx'
+    'src/components/common/roundedImage.tsx'
   ],
   theme: {
     extend: {
