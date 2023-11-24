@@ -6,7 +6,7 @@ import AppContainer from "src/components/container/appContainer";
 const inter = Inter({subsets: ['latin'], variable: '--font-inter'})
 
 export const metadata: Metadata = {
-  title: 'Tutor personalizado',
+  title: 'ConnectEd',
   description: '',
 }
 

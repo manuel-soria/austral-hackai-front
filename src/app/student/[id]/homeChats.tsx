@@ -13,7 +13,7 @@ const chats = [
     image: "/avatars/green.png"
   },
   {
-    name: "Física III",
+    name: "Inteligencia Artificial",
     id: "3",
     image: "/avatars/purple.png"
   },
