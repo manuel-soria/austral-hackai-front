@@ -18,7 +18,7 @@ const Label = (props: LabelProps) => {
   return (
       <div>
         {label && <P className={"text-base pb-2 "+textColor}>{label}</P>}
-        <div className={"flex p-3 items-center self-stretch rounded-xl border-2 border-solid "+borderColor}>
+        <div className={"flex p-2 items-center self-stretch rounded-xl border-2 border-solid "+borderColor}>
           <input placeholder={placeholder} onChange={e => setValue(e.target.value)}
                  className={"text-base w-full focus:outline-none disabled:bg-white "+textColor} value={value} disabled={disabled}/>
         </div>
